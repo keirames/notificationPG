@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -15,7 +15,9 @@ import {
   Text,
   useColorScheme,
   View,
+  PermissionsAndroid,
 } from 'react-native';
+import messaging from '@react-native-firebase/messaging';
 
 import {
   Colors,
@@ -61,6 +63,20 @@ function App(): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    const request = async () => {
+      const status = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS,
+      );
+      console.log('status', status);
+
+      const fcmToken = await messaging().getToken();
+      console.log('token - android', fcmToken);
+    };
+
+    request();
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>

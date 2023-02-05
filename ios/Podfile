@@ -1,3 +1,5 @@
+$RNFirebaseAsStaticFramework = true
+
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
@@ -22,6 +24,8 @@ if linkage != nil
 end
 
 target 'notificationPG' do
+  use_frameworks! :linkage => :static
+
   config = use_native_modules!
 
   # Flags change depending on the env values.
@@ -38,7 +42,9 @@ target 'notificationPG' do
     #
     # Note that if you have use_frameworks! enabled, Flipper will not work and
     # you should disable the next line.
-    :flipper_configuration => flipper_config,
+    # Note rnfirebase using use_frameworks, follow each updated version
+    # to check if this limitation is resolved
+    # :flipper_configuration => flipper_config,
     # An absolute path to your application root.
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "508140731731",
+    "project_id": "notificationpg-1e978",
+    "storage_bucket": "notificationpg-1e978.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:508140731731:android:72159466aab455d7c2f5a6",
+        "android_client_info": {
+          "package_name": "com.notificationpg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "508140731731-fqafrjfokkgl798f978qi5leoi4hbqsq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.notificationpg",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "508140731731-rvjjce4bb9ap38a27q5mdntoa6nvg1kq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5lur86dGpoD1wR-MVOdouzwkst1N_SFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "508140731731-rvjjce4bb9ap38a27q5mdntoa6nvg1kq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "508140731731-ijkfs343b0ah9mse5gg8gou5gk17jp0n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.notificationPG"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
